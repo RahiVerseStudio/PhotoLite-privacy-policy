@@ -1,604 +1,979 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PhotoLite — Privacy Policy</title>
+    <title>PhotoLite — Privacy Policy</title>
 
-<meta name="description"
-content="Privacy Policy for PhotoLite, a photo compression and resizing app by RahiVerse Studio.">
+    <meta name="description"
+          content="Privacy Policy for PhotoLite by RahiVerse Studio.">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Roboto, Helvetica, Arial, sans-serif;
-    background: #f5f7ff;
-    color: #202338;
-    line-height: 1.7;
-}
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f7ff;
+            color: #20243a;
+            line-height: 1.7;
+        }
 
-/* HEADER */
+        /* =========================
+           HERO
+        ========================= */
 
-.hero {
-    background: linear-gradient(135deg, #315bea, #7b4cff);
-    color: white;
-    padding: 70px 20px 85px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 65px 20px 85px;
+            text-align: center;
+            color: white;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,.18), transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,.14), transparent 30%),
+                linear-gradient(135deg, #1769ff 0%, #4f46e5 50%, #8b42e8 100%);
+        }
 
-.hero::before,
-.hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-}
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.08);
+            top: -180px;
+            left: -80px;
+        }
 
-.hero::before {
-    width: 280px;
-    height: 280px;
-    top: -130px;
-    left: -80px;
-}
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.06);
+            right: -180px;
+            bottom: -250px;
+        }
 
-.hero::after {
-    width: 350px;
-    height: 350px;
-    bottom: -200px;
-    right: -100px;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: auto;
+        }
 
-.logo {
-    width: 82px;
-    height: 82px;
-    margin: 0 auto 20px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 42px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-    position: relative;
-}
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 22px;
+            border-radius: 25px;
+            overflow: hidden;
+            background: rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.35);
+            box-shadow: 0 15px 40px rgba(0,0,0,.22);
+        }
 
-.hero h1 {
-    margin: 0;
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    position: relative;
-}
+        .logo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
 
-.hero p {
-    margin: 10px auto 0;
-    max-width: 650px;
-    font-size: 17px;
-    opacity: 0.92;
-    position: relative;
-}
+        .hero h1 {
+            margin: 0;
+            font-size: 48px;
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
 
-.badge {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 8px 16px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.16);
-    border: 1px solid rgba(255,255,255,0.25);
-    font-size: 14px;
-    position: relative;
-}
+        .hero-subtitle {
+            margin: 13px auto 0;
+            max-width: 650px;
+            font-size: 18px;
+            opacity: .94;
+        }
 
-/* MAIN */
+        .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 10px 18px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.28);
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
 
-.container {
-    max-width: 950px;
-    margin: -45px auto 60px;
-    padding: 0 20px;
-    position: relative;
-}
+        /* =========================
+           MAIN
+        ========================= */
 
-.card {
-    background: white;
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 30px rgba(30,40,90,0.07);
-    border: 1px solid #edf0fa;
-}
+        .container {
+            position: relative;
+            max-width: 1000px;
+            margin: -45px auto 70px;
+            padding: 0 18px;
+            z-index: 5;
+        }
 
-.card h2 {
-    margin-top: 0;
-    color: #315bea;
-    font-size: 23px;
-}
+        .card {
+            background: #ffffff;
+            border: 1px solid #e9edfa;
+            border-radius: 22px;
+            padding: 32px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 35px rgba(35,50,110,.07);
+        }
 
-.card h3 {
-    color: #343b60;
-    font-size: 18px;
-}
+        .card:hover {
+            box-shadow: 0 14px 40px rgba(35,50,110,.10);
+        }
 
-.card p:last-child {
-    margin-bottom: 0;
-}
+        .card h2 {
+            margin: 0 0 16px;
+            color: #315bea;
+            font-size: 25px;
+            line-height: 1.3;
+        }
 
-ul {
-    padding-left: 23px;
-}
+        .card h3 {
+            color: #394061;
+            margin-top: 25px;
+        }
 
-li {
-    margin: 7px 0;
-}
+        .card p {
+            margin: 12px 0;
+        }
 
-/* HIGHLIGHT */
+        /* =========================
+           INTRO
+        ========================= */
 
-.highlight {
-    background: linear-gradient(135deg, #eef3ff, #f6f1ff);
-    border-left: 5px solid #5b55ed;
-    border-radius: 12px;
-    padding: 18px 20px;
-    margin: 20px 0;
-}
+        .privacy-highlight {
+            background: linear-gradient(135deg, #eef5ff, #f5f0ff);
+            border: 1px solid #dfe7ff;
+        }
 
-.highlight strong {
-    color: #3346c7;
-}
+        .privacy-highlight h2 {
+            margin-bottom: 10px;
+        }
 
-/* CONTACT */
+        .safe-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-top: 22px;
+            padding: 20px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #e7f2ff, #f0ecff);
+        }
 
-.contact {
-    background: linear-gradient(135deg, #315bea, #7b4cff);
-    color: white;
-    text-align: center;
-}
+        .safe-icon {
+            min-width: 58px;
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3182f6, #6b4de6);
+            color: white;
+            font-size: 27px;
+        }
 
-.contact h2 {
-    color: white;
-}
+        .safe-title {
+            font-weight: 750;
+            color: #183b9d;
+            font-size: 18px;
+        }
 
-.email {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 12px 20px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.14);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
+        /* =========================
+           SECTION NUMBER
+        ========================= */
 
-.email:hover {
-    background: rgba(255,255,255,0.22);
-}
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
 
-/* FOOTER */
+        .number {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2877f5, #694be5);
+            color: white;
+            font-weight: 800;
+            font-size: 17px;
+        }
 
-footer {
-    text-align: center;
-    padding: 30px 20px 45px;
-    color: #777d98;
-    font-size: 14px;
-}
+        /* =========================
+           LIST
+        ========================= */
 
-.footer-brand {
-    font-weight: 700;
-    color: #444b70;
-}
+        ul {
+            padding-left: 25px;
+        }
 
-/* MOBILE */
+        li {
+            margin: 8px 0;
+        }
 
-@media (max-width: 600px) {
+        li::marker {
+            color: #4f5fe8;
+        }
 
-    .hero {
-        padding: 55px 18px 75px;
-    }
+        /* =========================
+           INFO GRID
+        ========================= */
 
-    .hero h1 {
-        font-size: 34px;
-    }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 22px;
+        }
 
-    .hero p {
-        font-size: 15px;
-    }
+        .info-item {
+            padding: 18px;
+            border-radius: 15px;
+            background: #f6f8ff;
+            border: 1px solid #e6eafb;
+        }
 
-    .container {
-        padding: 0 14px;
-        margin-top: -35px;
-    }
+        .info-label {
+            color: #6b7290;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
 
-    .card {
-        padding: 24px 20px;
-        border-radius: 16px;
-    }
+        .info-value {
+            color: #27356f;
+            font-weight: 700;
+            word-break: break-word;
+        }
 
-    .card h2 {
-        font-size: 21px;
-    }
-}
-</style>
+        /* =========================
+           HIGHLIGHT BOX
+        ========================= */
+
+        .highlight {
+            margin: 20px 0;
+            padding: 18px 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #edf5ff, #f4f0ff);
+            border-left: 5px solid #4c62e9;
+        }
+
+        .highlight strong {
+            color: #2e4bc3;
+        }
+
+        /* =========================
+           PERMISSION BOX
+        ========================= */
+
+        .permission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .permission {
+            padding: 18px;
+            border-radius: 15px;
+            background: #f8f9ff;
+            border: 1px solid #e7eafa;
+        }
+
+        .permission-icon {
+            font-size: 25px;
+            margin-bottom: 6px;
+        }
+
+        .permission-title {
+            font-weight: 750;
+            color: #334080;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            color: white;
+            text-align: center;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.13), transparent 25%),
+                linear-gradient(135deg, #315bea, #7048df);
+            border: none;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            opacity: .94;
+        }
+
+        .email {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 13px 22px;
+            border-radius: 13px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.25);
+            transition: .2s;
+        }
+
+        .email:hover {
+            background: rgba(255,255,255,.24);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 5px 20px 45px;
+            color: #777e9b;
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            font-weight: 750;
+            color: #465078;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 50px 18px 75px;
+            }
+
+            .logo {
+                width: 82px;
+                height: 82px;
+                border-radius: 21px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .container {
+                margin-top: -35px;
+                padding: 0 12px;
+            }
+
+            .card {
+                padding: 24px 20px;
+                border-radius: 17px;
+            }
+
+            .card h2 {
+                font-size: 21px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .permission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .safe-box {
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
 
-    <div class="logo">📸</div>
+    <div class="hero-content">
 
-    <h1>PhotoLite</h1>
+        <div class="logo">
+            <img src="photolite-logo.png"
+                 alt="PhotoLite App Logo">
+        </div>
 
-    <p>
-        Simple, fast and private photo compression & resizing.
-    </p>
+        <h1>PhotoLite</h1>
 
-    <div class="badge">
-        Privacy Policy · Last Updated September 23, 2026
+        <div class="hero-subtitle">
+            Simple, Fast and Private Photo Compression &amp; Resizing
+        </div>
+
+        <div class="updated">
+            🔒 Privacy Policy &nbsp;•&nbsp; Last Updated September 23, 2026
+        </div>
+
     </div>
 
 </header>
 
 
+<!-- =========================
+     CONTENT
+========================= -->
+
 <main class="container">
 
-<section class="card">
 
-<h2>Privacy at a Glance</h2>
+    <!-- PRIVACY AT A GLANCE -->
 
-<p>
-PhotoLite is designed with privacy in mind. The app allows you to
-compress and resize photos directly on your device.
-</p>
+    <section class="card privacy-highlight">
 
-<div class="highlight">
-<strong>Your photos stay on your device.</strong><br>
-PhotoLite does not upload your selected photos to RahiVerse Studio
-or store your photos on our servers.
-</div>
+        <h2>Privacy at a Glance</h2>
 
-</section>
+        <p>
+            PhotoLite is designed with privacy in mind.
+            The app allows you to compress and resize photos directly
+            on your device.
+        </p>
 
+        <div class="safe-box">
 
-<section class="card">
+            <div class="safe-icon">
+                🔒
+            </div>
 
-<h2>1. About This Privacy Policy</h2>
+            <div>
+                <div class="safe-title">
+                    Your photos stay on your device.
+                </div>
 
-<p>
-RahiVerse Studio ("we", "us", or "our") developed
-<strong>PhotoLite</strong> ("the App"), a photo compression and
-resizing application.
-</p>
+                <div>
+                    PhotoLite does not upload your selected photos
+                    to RahiVerse Studio or store your photos on our servers.
+                </div>
+            </div>
 
-<p>
-This Privacy Policy explains how PhotoLite accesses, uses, stores
-and handles information when you use the App.
-</p>
+        </div>
 
-<p>
-<strong>Developer:</strong> RahiVerse Studio<br>
-<strong>App:</strong> PhotoLite<br>
-<strong>Package:</strong> com.rahiverse.photolite
-</p>
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="card">
+
+        <div class="section-title">
+            <div class="number">1</div>
+            <h2>About This Privacy Policy</h2>
+        </div>
 
-</section>
+        <p>
+            RahiVerse Studio ("we", "us", or "our") developed
+            <strong>PhotoLite</strong> ("the App"), a photo compression
+            and resizing application.
+        </p>
 
+        <p>
+            This Privacy Policy explains how PhotoLite accesses,
+            uses, stores and handles information when you use the App.
+        </p>
 
-<section class="card">
+        <div class="info-grid">
 
-<h2>2. Information We Access</h2>
+            <div class="info-item">
+                <div class="info-label">Developer</div>
+                <div class="info-value">RahiVerse Studio</div>
+            </div>
 
-<p>
-PhotoLite may request access to photos and images stored on your
-device. This access is required so you can select photos and use
-the App's compression and resizing features.
-</p>
+            <div class="info-item">
+                <div class="info-label">App Name</div>
+                <div class="info-value">PhotoLite</div>
+            </div>
 
-<p>PhotoLite may use photo access to:</p>
+            <div class="info-item">
+                <div class="info-label">Package Name</div>
+                <div class="info-value">com.rahiverse.photolite</div>
+            </div>
 
-<ul>
-<li>Select photos for compression.</li>
-<li>Resize photos.</li>
-<li>Process photos locally.</li>
-<li>Save processed photos to your device.</li>
-</ul>
+        </div>
 
-<div class="highlight">
-<strong>PhotoLite does not upload your photos to our servers.</strong>
-</div>
+    </section>
 
-</section>
 
+    <!-- 2 -->
 
-<section class="card">
+    <section class="card">
 
-<h2>3. Photos and Images</h2>
+        <div class="section-title">
+            <div class="number">2</div>
+            <h2>Information We Access</h2>
+        </div>
 
-<p>
-Photos selected by you are processed on your device for the purpose
-of providing PhotoLite's functionality.
-</p>
+        <p>
+            PhotoLite may request access to photos and images stored
+            on your device.
+        </p>
 
-<p>
-PhotoLite does not sell, rent or share your photos with third parties.
-</p>
+        <p>
+            This access is required so that you can:
+        </p>
 
-<p>
-We do not use your photos for advertising, profiling or unrelated
-purposes.
-</p>
+        <div class="permission-grid">
 
-</section>
+            <div class="permission">
+                <div class="permission-icon">🖼️</div>
+                <div class="permission-title">
+                    Select Photos
+                </div>
+                <div>
+                    Select photos that you want to compress.
+                </div>
+            </div>
+
+            <div class="permission">
+                <div class="permission-icon">📐</div>
+                <div class="permission-title">
+                    Resize Photos
+                </div>
+                <div>
+                    Change the dimensions of your photos.
+                </div>
+            </div>
+
+            <div class="permission">
+                <div class="permission-icon">⚙️</div>
+                <div class="permission-title">
+                    Process Photos
+                </div>
+                <div>
+                    Perform compression and image processing.
+                </div>
+            </div>
+
+            <div class="permission">
+                <div class="permission-icon">💾</div>
+                <div class="permission-title">
+                    Save Photos
+                </div>
+                <div>
+                    Save processed images to your device.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="card">
+
+        <div class="section-title">
+            <div class="number">3</div>
+            <h2>Photos and Images</h2>
+        </div>
+
+        <p>
+            Photos selected by you are processed on your device
+            for the purpose of providing the App's functionality.
+        </p>
+
+        <div class="highlight">
+            <strong>
+                PhotoLite does not upload your photos or images
+                to our servers.
+            </strong>
+        </div>
+
+        <p>
+            We do not sell, rent or share your photos with third parties.
+        </p>
+
+        <p>
+            We do not use your photos for advertising, profiling
+            or unrelated purposes.
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="card">
+
+        <div class="section-title">
+            <div class="number">4</div>
+            <h2>Information We Collect</h2>
+        </div>
+
+        <p>
+            PhotoLite is designed to operate without collecting
+            personally identifiable information from you.
+        </p>
 
+        <p>We do not intentionally collect:</p>
 
-<section class="card">
+        <ul>
+            <li>Your name</li>
+            <li>Postal address</li>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>Contacts</li>
+            <li>Location information</li>
+            <li>Your photos on our servers</li>
+            <li>Photo contents for our own purposes</li>
+            <li>Account information</li>
+            <li>Payment information</li>
+        </ul>
 
-<h2>4. Information We Collect</h2>
+        <p>
+            PhotoLite does not require you to create an account
+            to use its core functionality.
+        </p>
 
-<p>
-PhotoLite is designed to operate without collecting personally
-identifiable information from you.
-</p>
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="card">
 
-<p>We do not intentionally collect:</p>
+        <div class="section-title">
+            <div class="number">5</div>
+            <h2>How Your Photos Are Used</h2>
+        </div>
 
-<ul>
-<li>Your name</li>
-<li>Postal address</li>
-<li>Phone number</li>
-<li>Email address</li>
-<li>Contacts</li>
-<li>Location information</li>
-<li>Your photos on our servers</li>
-<li>Photo contents for our own purposes</li>
-<li>Account information</li>
-<li>Payment information</li>
-</ul>
+        <p>
+            When you select a photo in PhotoLite, the photo may be
+            temporarily processed in your device's memory or local
+            storage to perform operations such as:
+        </p>
 
-<p>
-PhotoLite does not require you to create an account to use its
-core functionality.
-</p>
+        <ul>
+            <li>Compression</li>
+            <li>Resizing</li>
+            <li>Image processing</li>
+            <li>Saving the resulting image</li>
+        </ul>
 
-</section>
+        <p>
+            These operations are performed locally on your device.
+        </p>
 
+    </section>
 
-<section class="card">
 
-<h2>5. How Your Photos Are Used</h2>
+    <!-- 6 -->
 
-<p>
-When you select a photo in PhotoLite, the photo may be temporarily
-processed in your device's memory or local storage to perform
-operations such as:
-</p>
+    <section class="card">
 
-<ul>
-<li>Compression</li>
-<li>Resizing</li>
-<li>Image processing</li>
-<li>Saving the resulting image</li>
-</ul>
+        <div class="section-title">
+            <div class="number">6</div>
+            <h2>Data Sharing</h2>
+        </div>
 
-<p>
-These operations are performed locally on your device.
-</p>
+        <p>
+            We do not sell, rent or share your personal information
+            or photos with third parties.
+        </p>
 
-</section>
+        <p>
+            PhotoLite does not provide your photos to advertisers,
+            analytics providers or other third parties.
+        </p>
 
+    </section>
 
-<section class="card">
 
-<h2>6. Data Sharing</h2>
+    <!-- 7 -->
 
-<p>
-We do not sell, rent or share your personal information or photos
-with third parties.
-</p>
+    <section class="card">
 
-<p>
-PhotoLite does not provide your photos to advertisers, analytics
-providers or other third parties.
-</p>
+        <div class="section-title">
+            <div class="number">7</div>
+            <h2>Internet and Network Access</h2>
+        </div>
 
-</section>
+        <p>
+            The current version of PhotoLite is designed to perform
+            its core photo compression and resizing functionality
+            locally on your device.
+        </p>
 
+        <div class="highlight">
+            <strong>
+                The core photo-processing functionality does not
+                require an internet connection.
+            </strong>
+        </div>
 
-<section class="card">
+    </section>
 
-<h2>7. Internet and Network Access</h2>
 
-<p>
-The current version of PhotoLite is designed to perform its core
-photo compression and resizing functionality locally on your device.
-</p>
+    <!-- 8 -->
 
-<p>
-The core photo-processing functionality does not require an
-internet connection.
-</p>
+    <section class="card">
 
-</section>
+        <div class="section-title">
+            <div class="number">8</div>
+            <h2>App Permissions</h2>
+        </div>
 
+        <p>
+            PhotoLite may request Android permissions related to
+            accessing photos or images.
+        </p>
 
-<section class="card">
+        <p>
+            These permissions are used to provide the App's
+            photo-selection and photo-processing functionality.
+        </p>
 
-<h2>8. App Permissions</h2>
+        <p>
+            You can manage or revoke permissions through your Android
+            device's settings. Some features may not function correctly
+            if the required permission is denied.
+        </p>
 
-<p>
-PhotoLite may request Android permissions related to accessing
-photos or images.
-</p>
+    </section>
 
-<p>
-These permissions are used to provide the App's photo-selection
-and photo-processing functionality.
-</p>
 
-<p>
-You can manage or revoke permissions through your Android device's
-settings. Some features may not function correctly if the required
-permission is denied.
-</p>
+    <!-- 9 -->
 
-</section>
+    <section class="card">
 
+        <div class="section-title">
+            <div class="number">9</div>
+            <h2>Data Storage and Retention</h2>
+        </div>
 
-<section class="card">
+        <p>
+            PhotoLite does not maintain a remote database containing
+            your photos or personal information.
+        </p>
 
-<h2>9. Data Storage and Retention</h2>
+        <p>
+            Photos created or saved by PhotoLite remain under your
+            control on your device.
+        </p>
 
-<p>
-PhotoLite does not maintain a remote database containing your
-photos or personal information.
-</p>
+        <p>
+            Files saved by the App may remain on your device until
+            you choose to delete them using your device's file manager,
+            gallery application or applicable App functionality.
+        </p>
 
-<p>
-Photos created or saved by PhotoLite remain under your control
-on your device.
-</p>
+    </section>
 
-<p>
-Files saved by the App may remain on your device until you choose
-to delete them using your device's file manager, gallery application
-or applicable App functionality.
-</p>
 
-</section>
+    <!-- 10 -->
 
+    <section class="card">
 
-<section class="card">
+        <div class="section-title">
+            <div class="number">10</div>
+            <h2>Data Security</h2>
+        </div>
 
-<h2>10. Data Security</h2>
+        <p>
+            Because PhotoLite processes photos locally on your device
+            and does not upload them to our servers, your photos are
+            not transmitted to RahiVerse Studio for storage or processing.
+        </p>
 
-<p>
-Because PhotoLite processes photos locally on your device and does
-not upload them to our servers, your photos are not transmitted to
-RahiVerse Studio for storage or processing.
-</p>
+        <p>
+            You are responsible for maintaining the security of your
+            device, including using appropriate device security measures
+            such as a screen lock and keeping Android and PhotoLite updated.
+        </p>
 
-<p>
-You are responsible for maintaining the security of your device,
-including using appropriate device security measures such as a
-screen lock and keeping Android and PhotoLite updated.
-</p>
+    </section>
 
-</section>
 
+    <!-- 11 -->
 
-<section class="card">
+    <section class="card">
 
-<h2>11. Children's Privacy</h2>
+        <div class="section-title">
+            <div class="number">11</div>
+            <h2>Children's Privacy</h2>
+        </div>
 
-<p>
-PhotoLite is not specifically directed toward children.
-</p>
+        <p>
+            PhotoLite is not specifically directed toward children.
+        </p>
 
-<p>
-We do not knowingly collect personal information from children.
-If you believe that a child has provided personal information to us,
-please contact us using the information below.
-</p>
+        <p>
+            We do not knowingly collect personal information from children.
+        </p>
 
-</section>
+        <p>
+            If you believe that a child has provided personal information
+            to us, please contact us using the information below.
+        </p>
 
+    </section>
 
-<section class="card">
 
-<h2>12. Third-Party Services</h2>
+    <!-- 12 -->
 
-<p>
-The current version of PhotoLite does not intentionally share user
-photos or personal information with third-party services.
-</p>
+    <section class="card">
 
-<p>
-If third-party services, advertising services, analytics services
-or other technologies are added in future versions and they collect
-or process user data, this Privacy Policy and applicable Google Play
-disclosures will be updated as appropriate.
-</p>
+        <div class="section-title">
+            <div class="number">12</div>
+            <h2>Third-Party Services</h2>
+        </div>
 
-</section>
+        <p>
+            The current version of PhotoLite does not intentionally
+            share user photos or personal information with third-party
+            services.
+        </p>
 
+        <p>
+            If third-party services, advertising services, analytics
+            services or other technologies are added in future versions
+            and they collect or process user data, this Privacy Policy
+            and applicable Google Play disclosures will be updated
+            as appropriate.
+        </p>
 
-<section class="card">
+    </section>
 
-<h2>13. Your Privacy Choices</h2>
 
-<p>
-You can control PhotoLite's access to photos through Android's
-permission settings.
-</p>
+    <!-- 13 -->
 
-<ul>
-<li>Deny photo access.</li>
-<li>Revoke previously granted permissions.</li>
-<li>Delete photos created or saved by the App.</li>
-<li>Uninstall PhotoLite from your device.</li>
-</ul>
+    <section class="card">
 
-</section>
+        <div class="section-title">
+            <div class="number">13</div>
+            <h2>Your Privacy Choices</h2>
+        </div>
 
+        <p>
+            You can control PhotoLite's access to photos through
+            Android's permission settings.
+        </p>
 
-<section class="card">
+        <ul>
+            <li>Deny photo access.</li>
+            <li>Revoke previously granted permissions.</li>
+            <li>Delete photos created or saved by the App.</li>
+            <li>Uninstall PhotoLite from your device.</li>
+        </ul>
 
-<h2>14. Changes to This Privacy Policy</h2>
+    </section>
 
-<p>
-We may update this Privacy Policy from time to time to reflect
-changes to PhotoLite, applicable laws or our privacy practices.
-</p>
 
-<p>
-When changes are made, the Effective Date at the top of this page
-will be updated.
-</p>
+    <!-- 14 -->
 
-</section>
+    <section class="card">
 
+        <div class="section-title">
+            <div class="number">14</div>
+            <h2>Changes to This Privacy Policy</h2>
+        </div>
 
-<section class="card contact">
+        <p>
+            We may update this Privacy Policy from time to time to
+            reflect changes to PhotoLite, applicable laws or our
+            privacy practices.
+        </p>
 
-<h2>15. Contact Us</h2>
+        <p>
+            When changes are made, the Effective Date at the top
+            of this page will be updated.
+        </p>
 
-<p>
-If you have questions, concerns or requests regarding this Privacy
-Policy or PhotoLite's privacy practices, please contact us.
-</p>
+        <p>
+            You should periodically review this Privacy Policy
+            for any changes.
+        </p>
 
-<a class="email"
-href="mailto:rahiversestudio@gmail.com">
-rahiversestudio@gmail.com
-</a>
+    </section>
 
-<p>
-<strong>RahiVerse Studio</strong>
-</p>
 
-</section>
+    <!-- 15 -->
+
+    <section class="card contact">
+
+        <h2>15. Contact Us</h2>
+
+        <p>
+            If you have questions, concerns or requests regarding
+            this Privacy Policy or PhotoLite's privacy practices,
+            please contact us.
+        </p>
+
+        <a class="email"
+           href="mailto:rahiversestudio@gmail.com">
+            ✉️ rahiversestudio@gmail.com
+        </a>
+
+        <p>
+            <strong>RahiVerse Studio</strong>
+        </p>
+
+    </section>
+
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<div class="footer-brand">PhotoLite · RahiVerse Studio</div>
+    <div class="footer-brand">
+        PhotoLite · RahiVerse Studio
+    </div>
 
-<p>
-© 2026 RahiVerse Studio. All rights reserved.
-</p>
+    <p>
+        © 2026 RahiVerse Studio. All rights reserved.
+    </p>
 
 </footer>
+
 
 </body>
 </html>
